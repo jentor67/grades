@@ -1,0 +1,6 @@
+screen
+vim
+python36 
+python36-devel 
+python-setuptools
+pip3

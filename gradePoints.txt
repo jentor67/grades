@@ -1,0 +1,8 @@
+greater than or equal to 90% 4.0 A
+greater than or equal to 85% and less than 90% 3.5 BA
+greater than or equal to 80% and less than 85% 3.0 B
+greater than or equal to 75% and less than 80% 2.5 CB
+greater than or equal to 70% and less than 75% 2.0 C
+greater than or equal to 65% and less than 70% 1.5 DC
+greater than or equal to 60% and less than 65% 1.0 D
+less than 60% 0.0 E
