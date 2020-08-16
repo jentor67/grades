@@ -2,10 +2,13 @@
 
 #************----------------------------------------------*************
 
+# class grades
 class Grades():
     gradeList=[]
     maxPoints=-1
-    
+
+
+    # Dictionary of grades    
     gradeParametersDict = {
       "A": {
          "gradepoint": 4.0,
@@ -49,11 +52,15 @@ class Grades():
       },
     }
 
+
+    # initial welcome
     def __init__(self):
         print("Hello, Welcome to grade calculator")
         print("First, lets set the Maximum points for the test")
         print("")
 
+
+    # add grade to student list
     def addGrade(self,student):
 
         goodNumber = False
@@ -84,6 +91,7 @@ class Grades():
                     goodNumber = True
 
 
+    # format and print summary
     def calculateSummary(self):
         fail = False
         if self.maxPoints == -1 :
@@ -119,6 +127,8 @@ class Grades():
             print("************************************")
             print("")
 
+
+    # delete student
     def deleteStudent(self):
         self.reviewView()
         print("Which student point would you like to delete?")
@@ -142,6 +152,8 @@ class Grades():
                 print("Delete student" + str(student))
                 del self.gradeList[int(student)-1] 
 
+
+    # deteremine which route to take from start of program
     def doSelection(self,n):
         if ( n == 0 ) :
             print("Good by")
@@ -170,15 +182,14 @@ class Grades():
 
         return(999)
 
-    
+
+    # edit points of student test 
     def editPoints(self):
         self.reviewView()
         print("Which student point would you like to edit?")
         student = input()
         editPass = False
         while( editPass == False ): 
-            #print(student)
-            #print(len(self.gradeList))
             if( student.isdigit() == False ): 
                 print("This is not a positive integer")
             elif( (int(student)-1) >= len(self.gradeList) or 
@@ -194,8 +205,10 @@ class Grades():
             else:
                 print("")
                 self.addGrade(student)
+
                 
-     
+    # determine the letter grade and gradePoint from 
+    # gradeParametersDict dictionary 
     def grade(self,points):
         for id, info in self.gradeParametersDict.items():
             grade=id
@@ -210,6 +223,7 @@ class Grades():
         return(Grade,GP)
 
 
+    # start of class
     def grades(self):
         self.maxPoints = self.setMaxPoints()
  
@@ -239,6 +253,7 @@ class Grades():
         return
 
 
+    # review max points and student points
     def reviewView(self):
         print("")
         iStudent=1
@@ -250,6 +265,7 @@ class Grades():
         print("")
 
 
+    # set max points for a test
     def setMaxPoints(self):
         maxPoints=-1
              
