@@ -1,8 +1,13 @@
-greater than or equal to 90% 4.0 A
-greater than or equal to 85% and less than 90% 3.5 BA
-greater than or equal to 80% and less than 85% 3.0 B
-greater than or equal to 75% and less than 80% 2.5 CB
-greater than or equal to 70% and less than 75% 2.0 C
-greater than or equal to 65% and less than 70% 1.5 DC
-greater than or equal to 60% and less than 65% 1.0 D
-less than 60% 0.0 E
+97.5|100.0|4.0|A-plus
+92.5|97.5|3.67|A
+90.0|92.5|3.33|A-minus
+87.5|90.0|3.0|B-Plus
+82.5|87.5|2.67|B
+80.0|82.5|2.33|B-minus
+77.5|80.0|2.0|C-Plus
+72.5|77.5|1.67|C
+70.0|72.5|1.33|C-minus
+67.5|70.0|1.0|D-Plus
+62.5|67.5|0.67|D
+60.0|62.5|0.33|D-minus
+0.0|60|0.0|F

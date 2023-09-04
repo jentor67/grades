@@ -7,50 +7,26 @@ class Grades():
     gradeList=[]
     maxPoints=-1
 
+    # load dictunary grades
+    file1 = open("gradePoints.txt","r")
+    Lines = file1.readlines()
 
-    # Dictionary of grades    
-    gradeParametersDict = {
-      "A": {
-         "gradepoint": 4.0,
-         "high": 100,
-         "low": 90
-      },
-      "BA": {
-         "gradepoint": 3.5 ,
-         "high": 90,
-         "low": 85 
-      },
-      "B": {
-         "gradepoint": 3.0,
-         "high": 85,
-         "low": 80 
-      },
-      "CB": {
-         "gradepoint": 2.5,
-         "high": 80,
-         "low": 75 
-      },
-      "C": {
-         "gradepoint": 2.0,
-         "high": 75,
-         "low": 70 
-      },
-      "DC": {
-         "gradepoint": 1.5,
-         "high": 70,
-         "low": 65 
-      },
-      "D": {
-         "gradepoint": 1.0,
-         "high": 65,
-         "low": 60 
-      },
-      "E": {
-         "gradepoint": 0.0,
-         "high": 60,
-         "low": 0 
-      },
-    }
+    gradeParametersDict={} 
+    for line in Lines:
+        line = line.strip()
+        field = line.split("|")
+        gradepoint = field[2]
+        high = field[1]
+        low = field[0]
+        lettergrade = field[3]
+
+        new_data = {lettergrade: {"gradepoint": gradepoint, "high": high, "low": low }}
+   
+        gradeParametersDict.update(new_data)
+
+
+    file1.close()
+
 
 
     # initial welcome
@@ -215,7 +191,7 @@ class Grades():
             gradePoint=info['gradepoint']
             high=info['high']
             low=info['low']
-            if int(points) >= low :
+            if float(points) >= float(low) :
                 Grade=grade
                 GP=gradePoint
                 break
