@@ -56,7 +56,7 @@ class Grades():
     # initial welcome
     def __init__(self):
         print("Hello, Welcome to grade calculator")
-        print("First, lets set the Maximum points for the test")
+        print("First, set the Maximum points for the tests")
         print("")
 
 
